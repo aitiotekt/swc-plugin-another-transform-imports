@@ -181,6 +181,7 @@ impl VisitMut for TransformVisitor {
                                                 src: Box::new(transformed_path),
                                                 type_only: import_named_spec.is_type_only,
                                                 with: import_decl.with.clone(),
+                                                phase: import_decl.phase.clone(),
                                             },
                                         ));
 
@@ -201,6 +202,7 @@ impl VisitMut for TransformVisitor {
                                                     src: Box::new(transformed_path),
                                                     type_only: false,
                                                     with: import_decl.with.clone(),
+                                                    phase: import_decl.phase.clone(),
                                                 }),
                                             );
 
@@ -215,6 +217,7 @@ impl VisitMut for TransformVisitor {
                                                 src: import_decl.src.clone(),
                                                 type_only: import_decl.type_only,
                                                 with: import_decl.with.clone(),
+                                                phase: import_decl.phase.clone(),
                                             },
                                         ));
 
@@ -310,7 +313,7 @@ mod tests {
         }),
         base_transform,
         r#"import {MyButton} from "antd";"#,
-        r#"import MyButton from "antd/es/my-button";import "antd/es/my-button/style";"#
+        r#"import MyButton from "antd/es/my-button";import "antd/es/my-button/style";"#,
     );
 
 
