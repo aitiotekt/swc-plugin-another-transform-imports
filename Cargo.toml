@@ -11,7 +11,7 @@ codegen-units = 1
 # debug = true
 lto = true
 # Optimize for size
-opt-level = "s"
+opt-level = "z"
 # Strip debug symbols
 strip = "symbols"
 

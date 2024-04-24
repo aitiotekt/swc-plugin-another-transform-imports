@@ -1,6 +1,6 @@
 {
     "name": "@moneko/transform-imports",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "Another wasm swc transform imports plugin",
     "author": "moneko",
     "license": "MIT",
@@ -28,7 +28,7 @@
     },
     "main": "transform_imports.wasm",
     "scripts": {
-        "prepublishOnly": "cargo build --release --target wasm32-wasi && mv ./target/wasm32-wasi/release/swc_plugin_transform_imports.wasm ./transform_imports.wasm"
+        "prepublishOnly": "cargo build-wasi && mv ./target/wasm32-wasi/release/swc_plugin_transform_imports.wasm ./transform_imports.wasm"
     },
     "files": [
         "transform_imports.wasm"
