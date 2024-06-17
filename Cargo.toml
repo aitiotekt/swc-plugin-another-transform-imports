@@ -11,19 +11,19 @@ codegen-units = 1
 # debug = true
 lto = true
 # Optimize for size
-opt-level = "z"
+opt-level = 3
 # Strip debug symbols
 strip = "symbols"
 
 [dependencies]
 lazy_static = "1.4.0"
 maplit = "1.0.2"
-serde = { version = "1.0.198", features = ["derive"] }
-serde_json = "1.0.82"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.117"
 voca_rs = "1.15.2"
 tracing = "0.1.40"
-swc_common = { version = "0.33.25", features = ["concurrent"] }
-swc_core = { version = "0.91.0", features = [
+swc_common = { version = "0.34.1", features = ["concurrent"] }
+swc_core = { version = "0.95.2", features = [
   "ecma_plugin_transform",
   "ecma_utils",
   "ecma_quote",
@@ -34,4 +34,4 @@ swc_core = { version = "0.91.0", features = [
 ] }
 
 [dev-dependencies]
-swc_core = { features = ["testing_transform"], version = "0.91.0" }
+swc_core = { features = ["testing_transform"], version = "0.95.2" }
