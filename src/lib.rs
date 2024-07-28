@@ -150,7 +150,7 @@ impl VisitMut for TransformVisitor {
                                             {
                                                 match import_named_spec_name {
                                                     ModuleExportName::Str(s) => {
-                                                        Ident::new(s.value.clone(), s.span.clone())
+                                                        Ident::new(s.value.clone(), s.span.clone(), Default::default())
                                                     }
                                                     ModuleExportName::Ident(ident) => ident.clone(),
                                                 }

@@ -1,6 +1,6 @@
 {
     "name": "@moneko/transform-imports",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "Another wasm swc transform imports plugin",
     "author": "moneko",
     "license": "MIT",
