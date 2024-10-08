@@ -7,24 +7,25 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [profile.release]
+# 最大化单元内的优化，可能导致更好的整体性能，但也会增加编译时间
 codegen-units = 1
-# debug = true
+# 跨 crate 优化可以显著提升性能，并减少二进制文件体积
 lto = true
-# Optimize for size
+# 启用所有优化，特别是针对运行时性能的优化，会导致更大的二进制文件
 opt-level = 3
-# Strip debug symbols
+# 剥离掉调试符号，只保留必要的符号。不会直接提升性能，但可以减少可执行文件的大小，有助于减少加载时间
 strip = "symbols"
 
 [dependencies]
 lazy_static = "1.5.0"
 maplit = "1.0.2"
-serde = { version = "1.0.204", features = ["derive"] }
-serde_json = "1.0.120"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
 voca_rs = "1.15.2"
 tracing = "0.1.40"
-swc_allocator = "0.1.8"
-swc_common = { version = "0.36.2", features = ["concurrent"] }
-swc_core = { version = "0.99.5", features = [
+swc_allocator = "0.1.9"
+swc_common = { version = "0.40.1", features = ["concurrent"] }
+swc_core = { version = "0.109.0", features = [
   "ecma_plugin_transform",
   "ecma_utils",
   "ecma_quote",
@@ -35,4 +36,4 @@ swc_core = { version = "0.99.5", features = [
 ] }
 
 [dev-dependencies]
-swc_core = { features = ["testing_transform"], version = "0.99.5" }
+swc_core = { features = ["testing_transform"], version = "0.109.0" }
