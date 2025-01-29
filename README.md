@@ -1,5 +1,8 @@
 # swc-plugin-another-transform-imports
 
+[![npm version](https://img.shields.io/npm/v/swc-plugin-another-transform-imports/latest)](https://www.npmjs.com/package/swc-plugin-another-transform-imports)
+[![CI](https://github.com/aitiotekt/swc-plugin-another-transform-imports/actions/workflows/ci.yaml/badge.svg)](https://github.com/aitiotekt/swc-plugin-another-transform-imports/actions/workflows/ci.yaml)
+
 Another wasm plugin for swc, inspired from [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports).
 
 ## Installation
