@@ -20,11 +20,11 @@
     ],
     "repository": {
         "type": "git",
-        "url": "+https://github.com/lonelyhentxi/swc-plugin-another-transform-imports.git"
+        "url": "+https://github.com/aitiotekt/swc-plugin-another-transform-imports.git"
     },
-    "homepage": "https://github.com/lonelyhentxi/swc-plugin-another-transform-imports",
+    "homepage": "https://github.com/aitiotekt/swc-plugin-another-transform-imports",
     "bugs": {
-        "url": "https://github.com/lonelyhentxi/swc-plugin-another-transform-imports/issues"
+        "url": "https://github.com/aitiotekt/swc-plugin-another-transform-imports/issues"
     },
     "main": "swc_plugin_another_transform_imports.wasm",
     "scripts": {
