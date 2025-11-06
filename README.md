@@ -89,6 +89,7 @@ It is possible that as next.js and swc are updated, the current plugin will fail
 | 15.2.1 ~ 15.3.5 | 1.11.1 ~ 1.11.31 | 1.11.1 |
 | 15.4.0 ~ 15.4.3 | 1.12.0 ~ 1.12.14 | 1.12.0 |
 | 15.4.4 ~ 15.5.6 | 1.13.0 ~ 1.13.5  | 1.13.0 |
+| - | 1.14.0 | 1.14.0 |
 
 [@swc/core and swc_core version mappings](https://swc.rs/docs/plugin/selecting-swc-core)
 
