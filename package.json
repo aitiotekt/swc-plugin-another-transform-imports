@@ -1,6 +1,6 @@
 {
     "name": "swc-plugin-another-transform-imports",
-    "version": "1.14.0",
+    "version": "1.15.3",
     "description": "Another wasm swc transform imports plugin",
     "author": "Zhou Yeheng",
     "license": "MIT",
