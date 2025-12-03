@@ -3,6 +3,7 @@ use std::collections::HashMap;
 use swc_core::{
     ecma::{
         ast::*,
+        atoms::Atom,
         visit::{visit_mut_pass, VisitMut},
     },
     plugin::{plugin_transform, proxies::TransformPluginProgramMetadata},
@@ -125,7 +126,7 @@ impl VisitMut for TransformVisitor {
             match node {
                 ModuleItem::ModuleDecl(ref module_decl) => match module_decl {
                     ModuleDecl::Import(ref import_decl) => {
-                        let import_decl_value: &str = import_decl.src.value.as_ref();
+                        let import_decl_value: &str = import_decl.src.value.as_str().expect("Failed to convert Wtf8Atom to str");
 
                         if let Some(config) = self.configs.get(import_decl_value) {
                             let is_default_import_exist = import_decl.specifiers.iter().any(|s| {
@@ -147,11 +148,14 @@ impl VisitMut for TransformVisitor {
                                                 import_named_spec.imported
                                             {
                                                 match import_named_spec_name {
-                                                    ModuleExportName::Str(s) => Ident::new(
-                                                        s.value.clone(),
-                                                        s.span,
-                                                        Default::default(),
-                                                    ),
+                                                    ModuleExportName::Str(s) => {
+                                                        let atom_value = Atom::from(s.value.as_str().expect("Failed to convert Wtf8Atom to str"));
+                                                        Ident::new(
+                                                            atom_value,
+                                                            s.span,
+                                                            Default::default(),
+                                                        )
+                                                    },
                                                     ModuleExportName::Ident(ident) => ident.clone(),
                                                 }
                                             } else {

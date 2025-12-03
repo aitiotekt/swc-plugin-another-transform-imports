@@ -22,10 +22,10 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1.0.82"
 voca_rs = "1.15.2"
 tracing = "0.1.40"
-swc_core = { version = "22.5.4", features = [
+swc_core = { version = "46.0.3", features = [
   "ecma_plugin_transform",
   "__parser",
 ] }
 
 [dev-dependencies]
-swc_core = { features = ["testing_transform"], version = "22.5.4" }
+swc_core = { features = ["testing_transform"], version = "46.0.3" }
