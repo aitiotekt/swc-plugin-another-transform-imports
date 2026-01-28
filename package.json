@@ -1,6 +1,6 @@
 {
     "name": "swc-plugin-another-transform-imports",
-    "version": "1.15.3",
+    "version": "1.15.11-rc.1",
     "description": "Another wasm swc transform imports plugin",
     "author": "Zhou Yeheng",
     "license": "MIT",
@@ -31,7 +31,7 @@
         "prepublishOnly": "cargo build --release --target wasm32-wasip1 && cpx ./target/wasm32-wasip1/release/swc_plugin_another_transform_imports.wasm ."
     },
     "devDependencies": {
-        "@types/node": "^24.10.1",
+        "@types/node": "^24",
         "cpx2": "^8.0.0",
         "node-fetch": "^3.3.2",
         "tsx": "^4.21.0"
